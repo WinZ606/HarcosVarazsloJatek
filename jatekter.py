@@ -16,10 +16,14 @@ class jatekter:
         print(f"*{self.lista}*"," ",f"| A Tubamtolo életereje: {self.harcos.hp} |"," ",f"| A Waar'Ash Low életereje: {self.varazslo.hp} |")
         print("*"*24," ","-"*28," ","-"*30,"\n" )
 
-    #Jön a játék!
-    
+    def kiir2(self):
+        print(f"{self.kor}. kör")
+        print("*"*22," ","-"*28," ","-"*30)
+        print(f"*{self.lista}*"," ",f"| A Tubamtolo életereje: {self.harcos.hp} |"," ",f"| A Waar'Ash Low életereje: {self.varazslo.hp} |")
+        print("*"*22," ","-"*28," ","-"*30,"\n" )
+
     def jatekmenet(self):
-        while (self.harcos.hp > 0) and (self.varazslo.hp > 0):
+        while (self.harcos.hp > 0 and self.varazslo.hp > 0):
             self.harcos.set_poz()
             self.varazslo.set_poz()
             self.lista = ["_","_","_","_"]
@@ -31,7 +35,7 @@ class jatekter:
                 self.harcos.set_hp()
                 self.varazslo.set_hp()
             self.kor += 1
-            self.kiir()
+            self.kiir2()
     
     def kinyert(self):
         if (self.varazslo.hp <= 0):
